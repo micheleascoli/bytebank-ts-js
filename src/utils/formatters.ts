@@ -18,6 +18,10 @@ export function formatarData(data: Date, formato: FormatoData = FormatoData.PADR
             day: "2-digit",
             month: "2-digit"
         })
+    } else if (formato == FormatoData.MES){
+        return data.toLocaleDateString("pt-br", {
+            month: "long"
+        })
     } else if (formato == FormatoData.DIA_SEMANA_DIA_MES_ANO_LONG){
         return data.toLocaleDateString("pt-br", {
             weekday: "long",
